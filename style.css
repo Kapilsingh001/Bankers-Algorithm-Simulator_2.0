@@ -1,0 +1,233 @@
+/* =====================================================
+   GLOBAL RESET & BASE
+===================================================== */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.app-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* =====================================================
+   CARD LAYOUT
+===================================================== */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+input {
+    margin-left: 10px;
+    padding: 6px 8px;
+    width: 70px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+button {
+    padding: 10px 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #1976d2;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #125aa0;
+}
+
+/* Navigation buttons */
+.nav-btn {
+    background-color: #2e7d32;
+}
+
+.nav-btn:hover {
+    background-color: #1b5e20;
+}
+
+/* =====================================================
+   MATRIX SECTION
+===================================================== */
+.matrix-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+.actions {
+    text-align: center;
+}
+
+/* =====================================================
+   RESULT PANEL
+===================================================== */
+#resultPanel {
+    font-weight: bold;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+/* State colors */
+.safe {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.deadlock {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.waiting {
+    background-color: #fffde7;
+    color: #f9a825;
+}
+
+/* =====================================================
+   GRAPH AREA
+===================================================== */
+#graphArea {
+    height: 220px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    border-radius: 10px;
+}
+
+/* =====================================================
+   TABLET RESPONSIVE (≤ 1024px)
+===================================================== */
+@media (max-width: 1024px) {
+    body {
+        padding: 16px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    input {
+        width: 80px;
+    }
+}
+
+/* =====================================================
+   TABLET / SMALL LAPTOP (≤ 768px)
+===================================================== */
+@media (max-width: 768px) {
+
+    .app-header h1 {
+        font-size: 26px;
+    }
+
+    .matrix-section {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 6px;
+    }
+
+    button,
+    .nav-btn {
+        width: 100%;
+        margin-right: 0;
+        font-size: 15px;
+    }
+
+    .actions button {
+        margin-bottom: 10px;
+    }
+
+    #graphArea {
+        height: 180px;
+    }
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE (≤ 480px)
+===================================================== */
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .app-header h1 {
+        font-size: 22px;
+    }
+
+    .app-header p {
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    button,
+    .nav-btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    #graphArea {
+        height: 150px;
+        font-size: 13px;
+    }
+}

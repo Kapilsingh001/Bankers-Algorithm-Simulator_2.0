@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deadlock Detection & Recovery Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1️⃣ Header Section -->
+    <header class="app-header">
+        <h1>Deadlock Detection & Recovery Simulator</h1>
+        <p>Operating Systems Concept</p>
+    </header>
+
+    <!-- 2️⃣ System Configuration Panel -->
+    <section class="card">
+        <h2>System Configuration</h2>
+
+        <label>
+            Number of Processes:
+            <input type="number" id="processCount" min="1">
+        </label>
+
+        <label>
+            Number of Resources:
+            <input type="number" id="resourceCount" min="1">
+        </label>
+
+        <button id="generateBtn">Generate Tables</button>
+        <br>
+        <br>
+        <label>
+  Resource Model:
+  <select id="resourceModel">
+    <option value="single">Single Instance</option>
+    <option value="multiple">Multiple Instance</option>
+  </select>
+</label>
+
+    </section>
+
+    <!-- 3️⃣ Matrix Input Section -->
+    <section class="matrix-section">
+
+        <div class="card">
+            <h3>Allocation Matrix</h3>
+            <div id="allocationMatrix"></div>
+        </div>
+
+        <div class="card">
+            <h3>Request Matrix</h3>
+            <div id="requestMatrix"></div>
+        </div>
+
+        <div class="card">
+            <h3>Available Resources</h3>
+            <div id="availableResources"></div>
+        </div>
+
+    </section>
+
+    <!-- 4️⃣ Action Buttons -->
+    <section class="card actions">
+        <button id="detectBtn">Detect Deadlock</button>
+        <button id="resetBtn">Reset</button>
+        <button id="exampleBtn">Example Input</button>
+    </section>
+
+    <!-- 5️⃣ Detection Result Panel -->
+    <section class="card" id="resultPanel">
+        <h3>Detection Result</h3>
+        <p id="resultText">Waiting for input...</p>
+    </section>
+
+    <!-- 6️⃣ Wait-For Graph Visualization -->
+    <section class="card">
+        <h3>Wait-For Graph</h3>
+        <div id="graphArea">Graph will appear here</div>
+    </section>
+
+   <!-- 7️⃣ Recovery Panel -->
+<section class="card">
+    <h3>Deadlock Recovery</h3>
+
+    <select id="terminateSelect"></select>
+
+    <button id="terminateBtn">Terminate Process</button>
+    <button id="preemptBtn">Preemption Process</button>
+
+    <!-- 🔁 Banker's Algorithm Link -->
+    <div style="margin-top: 12px;">
+        <a href="https://kapilsingh001.github.io/Bankers-Algorithm-Simulator/"
+           target="_blank">
+            <button class="nav-btn">
+                🔁 Try Banker's Algorithm (Deadlock Avoidance)
+            </button>
+        </a>
+    </div>
+</section>
+
+
+    <!-- 8️⃣ Final System State -->
+    <section class="card">
+        <h3>Final System State</h3>
+        <div id="finalStateText"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
